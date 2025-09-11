@@ -356,7 +356,7 @@ export const updatePost = async (req, res) => {
 export const sendResetLink = async (req, res) => {
   try {
     const { email } = req.body;
-    const user = await userSchema.findOne({ email });
+    const user = await userSchema.findOne({ email: email });
     if (!user) {
       return res.status(400).send("user not found");
     }
