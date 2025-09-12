@@ -362,14 +362,8 @@ export const sendResetLink = async (req, res) => {
     }
 
     //  This must point to your frontend reset-password page
-<<<<<<< HEAD
     const resetUrl = `https://frontend-lumio-tb33.vercel.app
 /reset-password?email=${encodeURIComponent(email)}`;
-=======
-    const resetUrl = `http://localhost:3000/reset-password?email=${encodeURIComponent(
-      email
-    )}`;
->>>>>>> b2e9c4b (reset link fixed)
 
     await transporter.sendMail({
       from: "extaneesspirit@gmail.com",
